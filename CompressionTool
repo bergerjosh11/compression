@@ -10,10 +10,16 @@ class CompressionTool
   end
 end
 
-original_text = "This is a test message for compression."
-compressed_data = CompressionTool.compress(original_text)
-decompressed_text = CompressionTool.decompress(compressed_data)
+def main
+  puts "Enter a message for compression:"
+  original_text = gets.chomp
 
-puts "Original Text: #{original_text}"
-puts "Compressed Data: #{compressed_data}"
-puts "Decompressed Text: #{decompressed_text}"
+  compressed_data = CompressionTool.compress(original_text)
+  decompressed_text = CompressionTool.decompress(compressed_data)
+
+  puts "Original Text: #{original_text}"
+  puts "Compressed Data: #{compressed_data}"
+  puts "Decompressed Text: #{decompressed_text}"
+end
+
+main
